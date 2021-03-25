@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body  {
+    background-image: url({{ url_for('static', filename='Welcomepage.PNG') }});
+min-height: 100%;	 
+ /* Full height */
+	  height: 200%;
+	  width: 100%;
+	  /* Center and scale the image nicely */
+	  background-position: center;
+	      background-size:cover;
+  background-repeat: no-repeat;
+
+}
+
+ h1{ margin-top:100;}
+ </style>
+<style>
+ h2{ margin-top:100px;}
+ </style>
+ <style>
+ p{ margin-top:1px;}
+ </style>
+
+</head>
+
+<body >
+<h1 style="text-align:center;color:red; font-size:150%;">Welcome to Equipment Failure Prediction page</h1>
+<h2 style="text-align:center;color:red; font-size:150%;">Upload a File for Prediction</h2>
+    <form align = "center" action="/predict" method="post" enctype="multipart/form-data">
+      <p><input type="file" name="file">
+         <input type="submit" value="Upload & Submit for Prediction">
+    </form>
+</body>
+</html>
